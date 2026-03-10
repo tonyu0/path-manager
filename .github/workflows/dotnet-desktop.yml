@@ -2,7 +2,6 @@ name: .NET Core Desktop
 
 on:
   push:
-    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -49,6 +48,9 @@ jobs:
 
   release:
     runs-on: windows-latest
+    needs: [build]
+    if: startsWith(github.ref, 'refs/tags/') # Run only when a tag is changed
+
     env:
       App_Name: PathManager
       Solution_Path: PathManager.sln
@@ -74,7 +76,6 @@ jobs:
 
     - name: Create Release and Upload Asset
       uses: softprops/action-gh-release@v2
-      # if: startsWith(github.ref, 'refs/tags/') # Run only when a tag is changed
       with:
         files: release.zip
       env:
