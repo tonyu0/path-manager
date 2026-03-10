@@ -6,6 +6,9 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Settings for publish -->
+    <PublishSingleFile>true</PublishSingleFile>
   </PropertyGroup>
 
 </Project>

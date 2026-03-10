@@ -74,28 +74,34 @@ public partial class ContentTabPage : UserControl
                 //PathItem pathItem = ((Utils.PathItem)PathItemBindingSource[e.RowIndex]);
                 var pathItem = _displayList[e.RowIndex];
 
-                OpenPath(pathItem.Path);
+                if(OpenPath(pathItem.Path))
+                {
+                    _displayList[e.RowIndex].LastOpenedAt = DateTime.Now;
+                    _displayList.ResetBindings();
+                }
+
             }
         }
     }
 
-    private void OpenPath(string path)
+    private bool OpenPath(string path)
     {
         if (string.IsNullOrEmpty(path))
         {
             MessageBox.Show("empty path", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            return;
+            return false;
         }
 
         if (Directory.Exists(path))
         {
             System.Diagnostics.Process.Start("explorer.exe", path);
+            return true;
         }
         else
         {
             MessageBox.Show("cannot find the specified path", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            return false;
         }
-
     }
 
     private void DeleteTabButton_Click(object sender, EventArgs e)
@@ -164,5 +170,8 @@ public partial class ContentTabPage : UserControl
     private void ContentTabPage_Load(object sender, EventArgs e)
     {
         DataGridView.DataSource = _displayList;
+
+        //DataGridView.Sort(DataGridView.Columns["IsFavorite"], System.ComponentModel.ListSortDirection.Descending);
+        //DataGridView.Sort(DataGridView.Columns["LastOpenedAt"], System.ComponentModel.ListSortDirection.Descending);
     }
 }

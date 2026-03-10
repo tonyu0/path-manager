@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            OKButton = new Button();
-            CancelButton = new Button();
+            SettingsOKButton = new Button();
+            SettingsCancelButton = new Button();
             TabControl1 = new TabControl();
             TabPage1 = new TabPage();
             label1 = new Label();
@@ -38,27 +38,27 @@
             TabPage1.SuspendLayout();
             SuspendLayout();
             // 
-            // OKButton
+            // SettingsOKButton
             // 
-            OKButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            OKButton.DialogResult = DialogResult.OK;
-            OKButton.Location = new Point(116, 226);
-            OKButton.Name = "OKButton";
-            OKButton.Size = new Size(75, 23);
-            OKButton.TabIndex = 0;
-            OKButton.Text = "OK";
-            OKButton.UseVisualStyleBackColor = true;
+            SettingsOKButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            SettingsOKButton.DialogResult = DialogResult.OK;
+            SettingsOKButton.Location = new Point(116, 226);
+            SettingsOKButton.Name = "SettingsOKButton";
+            SettingsOKButton.Size = new Size(75, 23);
+            SettingsOKButton.TabIndex = 0;
+            SettingsOKButton.Text = "OK";
+            SettingsOKButton.UseVisualStyleBackColor = true;
             // 
-            // CancelButton
+            // SettingsCancelButton
             // 
-            CancelButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            CancelButton.DialogResult = DialogResult.Cancel;
-            CancelButton.Location = new Point(197, 226);
-            CancelButton.Name = "CancelButton";
-            CancelButton.Size = new Size(75, 23);
-            CancelButton.TabIndex = 1;
-            CancelButton.Text = "Cancel";
-            CancelButton.UseVisualStyleBackColor = true;
+            SettingsCancelButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            SettingsCancelButton.DialogResult = DialogResult.Cancel;
+            SettingsCancelButton.Location = new Point(197, 226);
+            SettingsCancelButton.Name = "SettingsCancelButton";
+            SettingsCancelButton.Size = new Size(75, 23);
+            SettingsCancelButton.TabIndex = 1;
+            SettingsCancelButton.Text = "Cancel";
+            SettingsCancelButton.UseVisualStyleBackColor = true;
             // 
             // TabControl1
             // 
@@ -103,8 +103,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(284, 261);
             Controls.Add(TabControl1);
-            Controls.Add(CancelButton);
-            Controls.Add(OKButton);
+            Controls.Add(SettingsCancelButton);
+            Controls.Add(SettingsOKButton);
             Name = "SettingsForm";
             Text = "SettingsForm";
             TabControl1.ResumeLayout(false);
@@ -115,8 +115,8 @@
 
         #endregion
 
-        private Button OKButton;
-        private Button CancelButton;
+        private Button SettingsOKButton;
+        private Button SettingsCancelButton;
         private TabControl TabControl1;
         private TabPage TabPage1;
         private Label label1;

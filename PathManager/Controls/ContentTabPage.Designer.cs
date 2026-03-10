@@ -32,12 +32,12 @@
             AddRowButton = new Button();
             RemoveRowButton = new Button();
             DataGridView = new DataGridView();
-            RefBtn = new DataGridViewButtonColumn();
             PathItemBindingSource = new BindingSource(components);
             DeleteTabButton = new Button();
             RenameTabButton = new Button();
             FilterTextBox = new TextBox();
             label1 = new Label();
+            RefBtn = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)DataGridView).BeginInit();
             ((System.ComponentModel.ISupportInitialize)PathItemBindingSource).BeginInit();
             SuspendLayout();
@@ -80,15 +80,6 @@
             DataGridView.Size = new Size(761, 230);
             DataGridView.TabIndex = 2;
             DataGridView.CellContentClick += dataGridView_CellContentClick;
-            // 
-            // RefBtn
-            // 
-            RefBtn.FillWeight = 20F;
-            RefBtn.HeaderText = "RefBtn";
-            RefBtn.Name = "RefBtn";
-            RefBtn.Text = "GO";
-            RefBtn.ToolTipText = "GO";
-            RefBtn.UseColumnTextForButtonValue = true;
             // 
             // PathItemBindingSource
             // 
@@ -138,6 +129,14 @@
             label1.Text = "Search filter: ";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // RefBtn
+            // 
+            RefBtn.FillWeight = 20F;
+            RefBtn.HeaderText = "";
+            RefBtn.Name = "RefBtn";
+            RefBtn.Text = "Open";
+            RefBtn.UseColumnTextForButtonValue = true;
+            // 
             // ContentTabPage
             // 
             AutoScaleMode = AutoScaleMode.Inherit;
@@ -164,9 +163,9 @@
         private DataGridView DataGridView;
         private Button DeleteTabButton;
         private Button RenameTabButton;
-        private DataGridViewButtonColumn RefBtn;
         private BindingSource PathItemBindingSource;
         private TextBox FilterTextBox;
         private Label label1;
+        private DataGridViewButtonColumn RefBtn;
     }
 }

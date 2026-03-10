@@ -30,8 +30,8 @@
         {
             CreateTabLabel = new Label();
             NewTabNameTextBox = new TextBox();
-            OKButton = new Button();
-            CancelButton = new Button();
+            CreateTabOKButton = new Button();
+            CreateTabCancelButton = new Button();
             SuspendLayout();
             // 
             // CreateTabLabel
@@ -51,36 +51,36 @@
             NewTabNameTextBox.Size = new Size(410, 23);
             NewTabNameTextBox.TabIndex = 1;
             // 
-            // OKButton
+            // CreateTabOKButton
             // 
-            OKButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            OKButton.DialogResult = DialogResult.OK;
-            OKButton.Location = new Point(266, 61);
-            OKButton.Name = "OKButton";
-            OKButton.Size = new Size(75, 23);
-            OKButton.TabIndex = 2;
-            OKButton.Text = "OK";
-            OKButton.UseVisualStyleBackColor = true;
+            CreateTabOKButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            CreateTabOKButton.DialogResult = DialogResult.OK;
+            CreateTabOKButton.Location = new Point(266, 61);
+            CreateTabOKButton.Name = "CreateTabOKButton";
+            CreateTabOKButton.Size = new Size(75, 23);
+            CreateTabOKButton.TabIndex = 2;
+            CreateTabOKButton.Text = "OK";
+            CreateTabOKButton.UseVisualStyleBackColor = true;
             // 
-            // CancelButton
+            // CreateTabCancelButton
             // 
-            CancelButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            CancelButton.DialogResult = DialogResult.Cancel;
-            CancelButton.Location = new Point(347, 61);
-            CancelButton.Name = "CancelButton";
-            CancelButton.Size = new Size(75, 23);
-            CancelButton.TabIndex = 3;
-            CancelButton.Text = "Cancel";
-            CancelButton.UseVisualStyleBackColor = true;
+            CreateTabCancelButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            CreateTabCancelButton.DialogResult = DialogResult.Cancel;
+            CreateTabCancelButton.Location = new Point(347, 61);
+            CreateTabCancelButton.Name = "CreateTabCancelButton";
+            CreateTabCancelButton.Size = new Size(75, 23);
+            CreateTabCancelButton.TabIndex = 3;
+            CreateTabCancelButton.Text = "Cancel";
+            CreateTabCancelButton.UseVisualStyleBackColor = true;
             // 
             // CreateTabDialog
             // 
-            AcceptButton = OKButton;
+            AcceptButton = CreateTabOKButton;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(434, 96);
-            Controls.Add(CancelButton);
-            Controls.Add(OKButton);
+            Controls.Add(CreateTabCancelButton);
+            Controls.Add(CreateTabOKButton);
             Controls.Add(NewTabNameTextBox);
             Controls.Add(CreateTabLabel);
             Name = "CreateTabDialog";
@@ -93,7 +93,7 @@
 
         private Label CreateTabLabel;
         private TextBox NewTabNameTextBox;
-        private Button OKButton;
-        private Button CancelButton;
+        private Button CreateTabOKButton;
+        private Button CreateTabCancelButton;
     }
 }

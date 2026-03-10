@@ -94,7 +94,6 @@
         }
 
         #endregion
-        private OpenFileDialog openFileDialog1;
         private TabControl ContentTabControl;
         private MenuStrip menuStrip1;
         private ToolStripMenuItem NewToolStripMenuItem;
